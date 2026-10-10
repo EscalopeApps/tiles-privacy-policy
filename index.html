@@ -68,7 +68,7 @@
   <strong>Developer:</strong> Escalope Apps, Austria
   (<a href="./impressum.html">legal notice</a>)<br>
   <strong>Effective date:</strong> September 28, 2026<br>
-  <strong>Last updated:</strong> September 28, 2026
+  <strong>Last updated:</strong> October 10, 2026
 </p>
 
 <h2>Summary</h2>
@@ -90,7 +90,7 @@
 
 <h2>Data stored on your device</h2>
 <p>
-  So that the game remembers where you left off, it saves four small values in
+  So that the game remembers where you left off, it saves six small values in
   the local storage of its own app container:
 </p>
 <div class="table-wrap">
@@ -103,6 +103,8 @@
     <tr><td>Sound on or off</td><td>To keep your audio preference</td><td><code>true</code></td></tr>
     <tr><td>Light or dark appearance</td><td>To keep your display preference</td><td><code>dark</code></td></tr>
     <tr><td>Whether you have seen the tutorial</td><td>So the guide is not shown again</td><td><code>true</code></td></tr>
+    <tr><td>How many rounds you have finished</td><td>To decide when to ask once for a review</td><td><code>7</code></td></tr>
+    <tr><td>Whether we have asked for a review</td><td>So you are never asked a second time</td><td><code>true</code></td></tr>
   </tbody>
 </table>
 </div>
@@ -124,9 +126,12 @@
 <p>
   The app declares a single Android permission, <code>INTERNET</code>. It is a
   standard requirement of the app framework the game is built with (Capacitor)
-  and is not used to transfer any data: the game makes no network requests. It
-  requests no other permission — no camera, no microphone, no location, no
-  contacts, no storage access.
+  and is not used to transfer any data: the game makes no network requests of
+  its own. The one outward link is its Play Store listing, which you can open
+  from the settings window — your device opens it in the Play Store app or your
+  browser, and the game sends nothing along with it. The app requests no other
+  permission — no camera, no microphone, no location, no contacts, no storage
+  access.
 </p>
 
 <h2>Third parties</h2>
@@ -141,6 +146,14 @@
   its own behalf. That processing is governed by Google's privacy policy, not by
   this one. See
   <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+</p>
+<p>
+  The same applies to rating the app. The game can take you to its Play Store
+  listing, and after a particularly good round it may once ask the Play Store to
+  show its own review dialog. Both are shown and handled by the Play Store app,
+  not by us: we never see whether you rated the app or what you wrote, and a
+  review you submit is processed by Google under the policy linked above. The
+  game sends nothing of its own either way.
 </p>
 
 <h2>Children</h2>
